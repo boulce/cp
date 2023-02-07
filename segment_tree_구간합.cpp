@@ -26,7 +26,7 @@ ll query(vector<ll>& tree, int node, int start, int end, int left, int right){
     if(left <= start && end <= right){
         return tree[node];
     }
-    int mid = (left+right)/2;
+    int mid = (start+end)/2;
     ll lsum = query(tree, node*2, start, mid, left, right);
     ll rsum = query(tree, node*2+1, mid+1, end, left, right);
     return lsum + rsum;
