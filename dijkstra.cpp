@@ -7,7 +7,6 @@ using namespace std;
 int n;
 vector<pair<int, int>> adjList[2001];
 int dijkstra(int s, int e){ // s에서 e까지의 최단 경로 반환
-    vector<int> res;
     int dist[2001];
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
     fill(dist, dist+n+1, INF);
